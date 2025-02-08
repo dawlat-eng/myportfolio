@@ -6,4 +6,8 @@ export default defineConfig({
     tailwindcss(),
   ],
   assetsInclude: ['**/*.jpg','**/*.JPG', '**/*.jpeg', '**/*.png', '**/*.gif', '**/*.svg', '**/*.webp'],
+  build: {
+    outDir: 'build/client',
+    emptyOutDir: true, // also necessary
+  }
 });
