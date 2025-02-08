@@ -4,8 +4,8 @@ export default function Contact() {
   return (
     <div className="bg-pink-800 h-screen text-white py-16 px-4 md:px-12 lg:px-24">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
-        <p className="font-bold text-2xl md:text-3xl mb-8">Feel free to reach out to me at</p>
+        <h2 className="text-4xl pb-10 font-bold mb-6">Contact Me</h2>
+        <p className="font-bold text-2xl pb-10 md:text-3xl mb-8">Feel free to reach out to me at</p>
       </div>
 
       {/* Contact Details */}
