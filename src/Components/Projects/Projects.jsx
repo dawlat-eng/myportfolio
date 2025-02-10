@@ -17,28 +17,28 @@ export default function Projects() {
       title: "Logisto",
       image: img2,
       description:
-        "A Logistics website built with ReactJS for dynamic components and Vite for fast, optimized performance",
+        "A Logistics website built with ReactJS for dynamic components and Vite for fast, optimized performance.",
       link: "https://logistics-one-pi.vercel.app/",
     },
   ];
 
   return (
-    <div id="project_page" className="bg-pink-50 h-screen py-16 px-6">
-      <h2 className="text-center text-4xl font-extrabold text-pink-600 mb-8">
+    <div id="project_page" className="bg-pink-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-center text-3xl sm:text-4xl font-extrabold text-pink-600 mb-8">
         Projects
       </h2>
 
       {/* Grid Layout for Projects */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {projectData.map((project, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-lg p-6 transition-transform hover:scale-105">
-            <h3 className="text-2xl font-bold text-pink-500">{project.title}</h3>
-            
-            {/* Clickable Image with Transition */}
+          <div key={index} className="bg-white rounded-lg shadow-lg p-5 transition-transform hover:scale-105">
+            <h3 className="text-xl sm:text-2xl font-bold text-pink-500">{project.title}</h3>
+
+            {/* Clickable Image */}
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-52 object-cover rounded-lg mt-4 shadow-md cursor-pointer transition-transform duration-500 hover:scale-110 hover:shadow-2xl"
+              className="w-full h-48 object-cover rounded-lg mt-4 shadow-md cursor-pointer transition-transform duration-500 hover:scale-110 hover:shadow-2xl"
               onClick={() => setSelectedImage(project.image)}
             />
 
@@ -54,9 +54,7 @@ export default function Projects() {
               <svg
                 aria-hidden="true"
                 focusable="false"
-                data-prefix="fas"
-                data-icon="link"
-                className="w-6 h-6 mr-2"
+                className="w-5 h-5 sm:w-6 sm:h-6 mr-2"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 512"
                 fill="currentColor"
@@ -69,13 +67,13 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Image Modal (Enlarges when clicked) */}
+      {/* Image Modal */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 px-4">
           <img
             src={selectedImage}
             alt="Selected"
-            className="w-3/4 md:w-1/2 rounded-lg shadow-2xl transition-transform duration-500 scale-100 hover:scale-105"
+            className="w-full max-w-lg sm:max-w-md rounded-lg shadow-2xl transition-transform duration-500 scale-100 hover:scale-105"
           />
           <button
             className="absolute top-5 right-5 text-white text-2xl bg-pink-500 p-2 rounded-full hover:bg-pink-700"
